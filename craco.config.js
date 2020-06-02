@@ -6,6 +6,7 @@ const joinResolver = _path => path.join(path.resolve(__dirname, _path))
 module.exports = {
     webpack: {
         alias: {
+            '@public': joinResolver('./public'),
             '@app': joinResolver('./src'),
             '@components': joinResolver('./src/components'),
             '@containers': joinResolver('./src/containers'),

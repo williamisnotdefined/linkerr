@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import useAuthenticated from '@services/hooks/useAuthenticated'
 
@@ -8,6 +9,7 @@ import dragonLogo from '@images/dragon.gif'
 
 const MenuDesktop = () => {
     const isAuthenticated = useAuthenticated()
+    const { t } = useTranslation()
 
     return (
         <Container>
@@ -15,7 +17,7 @@ const MenuDesktop = () => {
             <List>
                 <ListItem>
                     <Anchor exact to="/">
-                        Dragon List
+                        {t('pages')}
                     </Anchor>
                 </ListItem>
                 <ListItem>
